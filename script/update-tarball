@@ -1,0 +1,20 @@
+#!/usr/bin/env perl
+
+use warnings;
+use strict;
+use autodie qw(:all);
+
+my $version = shift or die "no version";
+
+`git rm libgumbo-*.tar.gz`;
+`git submodule foreach git pull`;
+`git commit -m "update gumbo source" gumbo-src`;
+`cp -a gumbo-src libgumbo-$version/`;
+`rm -fr libgumbo-$version/.git/`;
+`tar -czvf libgumbo-$version.tar.gz libgumbo-$version/`;
+`git add libgumbo-$version.tar.gz`;
+`rm -fr libgumbo-$version/`;
+`cat MANIFEST | perl -ne 'm{^libgumbo-.*\.tar\.gz\$} || print' > MANIFEST`;
+`./Build manifest`;
+`git add MANIFEST`;
+`git commit -m "update gumbo tarball" libgumbo-* MANIFEST`;
