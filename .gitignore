@@ -1,0 +1,7 @@
+Build
+blib/
+_alien/
+_build/
+_share/
+MYMETA.*
+*.bak
