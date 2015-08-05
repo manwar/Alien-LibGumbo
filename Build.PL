@@ -35,7 +35,14 @@ my %module_build_args = (
     "Path::Class" => "0.013"
   },
   "script_files" => [],
-  "test_requires" => {}
+  "test_requires" => {},
+  meta_merge => {
+    resources  => {
+      repository => "https://github.com/ruz/Alien-LibGumbo",
+      # uncomment to use GitHub issue tracker instead of RT
+      #bugtracker => "https://github.com/ruz/Alien-LibGumbo/issues",
+    },
+  },
 );
 
 
