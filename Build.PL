@@ -5,16 +5,11 @@ use Module::Build 0.3601;
 use lib qw{inc}; use Alien::Base::ModuleBuild;
 
 my %module_build_args = (
-  "alien_build_commands" => [
-    "%pautogen.sh",
-    "%pconfigure --prefix=%s",
-    "make",
-  ],
-  "alien_name" => "libgumbo",
+  "alien_name" => "gumbo",
   "alien_repository" => {
     "host" => "",
     "location" => "./",
-    "pattern" => qr/(?:^libgumbo-([\d\.]+)\.tar\.gz$)/,
+    "pattern" => qr/(?:^gumbo-([\d\.]+)\.tar\.gz$)/,
     "protocol" => "local",
   },
   "build_requires" => {},
