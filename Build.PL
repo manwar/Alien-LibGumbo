@@ -12,9 +12,10 @@ my %module_build_args = (
     "pattern" => qr/(?:^gumbo-([\d\.]+)\.tar\.gz$)/,
     "protocol" => "local",
   },
+  alien_isolate_dynamic => 1,
   "build_requires" => {},
   "configure_requires" => {
-    "Alien::Base" => "0.002",
+    "Alien::Base" => "0.005",
     "File::ShareDir" => "1.03",
     "Path::Class" => "0.013"
   },
@@ -29,7 +30,7 @@ my %module_build_args = (
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
-    "Alien::Base" => "0.002",
+    "Alien::Base" => "0.005",
     "File::ShareDir" => "1.03",
     "Path::Class" => "0.013"
   },
