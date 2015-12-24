@@ -5,21 +5,17 @@ use Module::Build 0.3601;
 use lib qw{inc}; use Alien::Base::ModuleBuild;
 
 my %module_build_args = (
-  "alien_build_commands" => [
-    "%pautogen.sh",
-    "%pconfigure --prefix=%s",
-    "make",
-  ],
-  "alien_name" => "libgumbo",
+  "alien_name" => "gumbo",
   "alien_repository" => {
     "host" => "",
     "location" => "./",
-    "pattern" => qr/(?:^libgumbo-([\d\.]+)\.tar\.gz$)/,
+    "pattern" => qr/(?:^gumbo-([\d\.]+)\.tar\.gz$)/,
     "protocol" => "local",
   },
+  alien_isolate_dynamic => 1,
   "build_requires" => {},
   "configure_requires" => {
-    "Alien::Base" => "0.002",
+    "Alien::Base" => "0.005",
     "File::ShareDir" => "1.03",
     "Path::Class" => "0.013"
   },
@@ -34,12 +30,19 @@ my %module_build_args = (
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
-    "Alien::Base" => "0.002",
+    "Alien::Base" => "0.005",
     "File::ShareDir" => "1.03",
     "Path::Class" => "0.013"
   },
   "script_files" => [],
-  "test_requires" => {}
+  "test_requires" => {},
+  meta_merge => {
+    resources  => {
+      repository => "https://github.com/ruz/Alien-LibGumbo",
+      # uncomment to use GitHub issue tracker instead of RT
+      #bugtracker => "https://github.com/ruz/Alien-LibGumbo/issues",
+    },
+  },
 );
 
 
