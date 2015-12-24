@@ -2,3 +2,5 @@ Build.PL
 gumbo-0.10.1.tar.gz
 lib/Alien/LibGumbo.pm
 MANIFEST
+META.yml
+META.json
