@@ -17,14 +17,15 @@ my %module_build_args = (
   "configure_requires" => {
     "Alien::Base" => "0.005",
     "File::ShareDir" => "1.03",
-    "Path::Class" => "0.013"
+    "Path::Class" => "0.013",
+    "Module::Build" => 0.42,
   },
   "dist_abstract" => "gumbo parser library",
   "dist_author" => [
     "Ruslan Zakirov <Ruslan.Zakirov\@gmail.com>"
   ],
   "dist_name" => "Alien-LibGumbo",
-  "dist_version" => "0.02",
+  "dist_version" => "0.03",
   "license" => "perl",
   "module_name" => "Alien::LibGumbo",
   "recommends" => {},
