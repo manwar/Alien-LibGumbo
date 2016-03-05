@@ -4,7 +4,7 @@
       "Ruslan Zakirov <Ruslan.Zakirov@gmail.com>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.421",
+   "generated_by" : "Module::Build version 0.4216",
    "license" : [
       "perl_5"
    ],
@@ -16,7 +16,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Alien::Base" : "0.005",
+            "Alien::Base::ModuleBuild" : "0.005",
             "File::ShareDir" : "1.03",
             "Module::Build" : "0.42",
             "Path::Class" : "0.013"
@@ -33,7 +33,7 @@
    "provides" : {
       "Alien::LibGumbo" : {
          "file" : "lib/Alien/LibGumbo.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       }
    },
    "release_status" : "stable",
@@ -45,5 +45,6 @@
          "url" : "https://github.com/ruz/Alien-LibGumbo"
       }
    },
-   "version" : "0.03"
+   "version" : "0.04",
+   "x_serialization_backend" : "JSON::PP version 2.27300"
 }
