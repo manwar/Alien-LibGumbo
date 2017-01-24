@@ -5,3 +5,4 @@ MANIFEST
 Changes
 META.json
 META.yml
+t/00-load.t
